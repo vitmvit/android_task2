@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:elevation="4dp">
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="35dp">
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appwidget_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@+id/appwidget_label"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ic_face_black_24dp"
+                        style="@style/BackgroundWidgetStyle"/>
+            </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relativeLayout"
+                    android:padding="20dp">
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/textViewTitle"
+                          style="@style/TitleStyle"
+                          android:text="@string/title">
+                </TextView>
+                <TextView android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/textViewDescription"
+                          style="@style/DescriptionStyle"
+                          android:text="@string/description"
+                          android:layout_below="@id/textViewTitle">
+                </TextView>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
