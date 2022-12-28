@@ -8,11 +8,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentResultListener;
 import androidx.fragment.app.FragmentTransaction;
+import com.clevertec.task2.interfaces.OnBackPressedListener;
 import com.clevertec.task_2.R;
 
-public class SecondFragment extends Fragment {
+public class SecondFragment extends Fragment implements OnBackPressedListener {
 
     private Button buttonClose;
     private Button buttonPrevious;
@@ -78,5 +80,16 @@ public class SecondFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        FragmentManager fragmentManager = getParentFragmentManager();
+        fragmentManager.beginTransaction()
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
+                .remove(this)
+                .replace(R.id.container_fragments, FirstFragment.newInstance())
+                .commit();
     }
 }

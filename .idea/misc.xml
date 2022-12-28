@@ -7,6 +7,8 @@
         <entry key="app/src/main/res/drawable/ic_face_black_24dp.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_face_black_70dp.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.13145896656534956" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.13145896656534956" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.1" />
         <entry key="app/src/main/res/layout/recycler_item.xml" value="0.1" />
       </map>
