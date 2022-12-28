@@ -11,13 +11,14 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.clevertec.task2.adapter.MyAdapter;
+import com.clevertec.task2.interfaces.OnBackPressedListener;
 import com.clevertec.task2.model.RecyclerItem;
 import com.clevertec.task_2.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FirstFragment extends Fragment {
+public class FirstFragment extends Fragment implements OnBackPressedListener {
 
     private RecyclerView recyclerView;
     private MyAdapter adapter;
@@ -73,6 +74,11 @@ public class FirstFragment extends Fragment {
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .replace(R.id.container_fragments, SecondFragment.newInstance())
                 .commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        System.exit(0);
     }
 
     @Override
